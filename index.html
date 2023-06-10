@@ -1,13 +1,360 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+     <!--Yandex.Metrika counter -->
+     <!-- <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]function(){(m[i].a=m[i].a[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+        ym(93810082, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script> -->
+    <!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Pinocchio. Продукты и доставка</title>
+</head>
+<body>
+    <noscript><div><img src="https://mc.yandex.ru/watch/93810082" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <div class="inner" id="inner1">
+        <section>
+            <header>
+                <div class="header">
+                    <div class="header_burger">
+                        <div class="header_burger_burger" onclick="openBurger()">
+                            <span id="bur1"></span>
+                            <span id="bur2"></span>
+                            <span id="bur3"></span>
+                        </div>
+                    </div>
+                    <div class="header_logo">
+                        <a href="#"><img src="img/logo.png"></a>
+                    </div>
+                    <div class="header_links">
+                        <a>
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 17L21 21" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#ffffff" stroke-width="2"></path> </g></svg>
+                        </a>
+                        <a href="login.html">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="User / User_02"> <path id="Vector" d="M20 21C20 18.2386 16.4183 16 12 16C7.58172 16 4 18.2386 4 21M12 13C9.23858 13 7 10.7614 7 8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8C17 10.7614 14.7614 13 12 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+                        </a>
+                        <a>
+                            <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Basket</title> <g id="Basket" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <rect id="Container" x="0" y="0" width="24" height="24"> </rect> <path d="M4,10 L20,10 L20,16 C20,18.209139 18.209139,20 16,20 L8,20 C5.790861,20 4,18.209139 4,16 L4,10 L4,10 Z" id="shape-1" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0"> </path> <path d="M7,4 L17,4 L17,5 C17,7.76142375 14.7614237,10 12,10 C9.23857625,10 7,7.76142375 7,5 L7,4 L7,4 Z" id="shape-2" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" transform="translate(12.000000, 7.000000) scale(1, -1) translate(-12.000000, -7.000000) "> </path> <line x1="12" y1="13" x2="12" y2="17" id="shape-3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0"> </line> <line x1="16" y1="13" x2="16" y2="17" id="shape-4" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0"> </line> <line x1="8" y1="13" x2="8" y2="17" id="shape-5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0"> </line> </g> </g></svg>
+                        </a>
+                    </div>
+                    <div class="header_basket">
+                        <a href="#">
+                            <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Basket</title> <g id="Basket" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <rect id="Container" x="0" y="0" width="24" height="24"> </rect> <path d="M4,10 L20,10 L20,16 C20,18.209139 18.209139,20 16,20 L8,20 C5.790861,20 4,18.209139 4,16 L4,10 L4,10 Z" id="shape-1" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0"> </path> <path d="M7,4 L17,4 L17,5 C17,7.76142375 14.7614237,10 12,10 C9.23857625,10 7,7.76142375 7,5 L7,4 L7,4 Z" id="shape-2" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" transform="translate(12.000000, 7.000000) scale(1, -1) translate(-12.000000, -7.000000) "> </path> <line x1="12" y1="13" x2="12" y2="17" id="shape-3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0"> </line> <line x1="16" y1="13" x2="16" y2="17" id="shape-4" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0"> </line> <line x1="8" y1="13" x2="8" y2="17" id="shape-5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0"> </line> </g> </g></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="search">
+                    <div class="search_input">
+                        <input type="text" placeholder="Поиск товара">
+                        <a href="#">Найти</a>
+                    </div>
+                </div>
+            </header>
+            <div class="search_button" id="search">
+                <div class="search_button_close">
+                    <img src="img/close.png" onclick="openSearch()">
+                </div>
+                <div class="search_button_input">
+                    <input type="text" placeholder="Поиск товара">
+                    <button type="submit">Найти</button>
+                </div>
+            </div>
+            <div class="burger_nav" id="burger_nav">
+                <a href="login.html" class="nav_link" onclick="">Войти</a>
+                <a class="nav_link" onclick="">Корзина</a>
+                <a class="nav_link" onclick="">Каталог</a>
+            </div>
+            <div class="inner_info">
+                <div class="inner_info_bloks">
+                    <div class="inner_info_bloks_p">
+                        <p id="change_info_block1_p" style="font-size: 40px;">Скидки <span style="font-weight: 700; font-size: 50px">20%</span> на всё! по промокоду</p>
+                        <h2 id="change_info_block1_h2">PINNOCHIO</h2>
+                        <p id="change_info_block2_p" style="display: none;">Мы заботимся о качестве продуктов</p>
+                    </div>
+                    
+                    <a href="#about">Погнали!</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section id="about">
+        <div class="about-wrapper container">
+            <div class="about-text">
+                <p class="small">О нас</p>
+                <h2>Pinnochio - интернет магазин с огромным выбором продуктов</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse ab
+                    eos omnis, nobis dignissimos perferendis et officia architecto,
+                    fugiat possimus eaque qui ullam excepturi suscipit aliquid optio,
+                    maiores praesentium soluta alias asperiores saepe commodi
+                    consequatur? Perferendis est placeat facere aspernatur!
+                </p>
+            </div>
+            <div class="about-img">
+                <img src="img/vegetables.png" alt="food" />
+            </div>
+        </div>
+    </section>
+
+    <section class="rec container" id="rec">
+        <h2>Рекомендуем</h2>
+        <div class="rec_products">
+            <div class="rec_row">
+                <div class="rec_item">
+                    <div class="rec_item_img">
+                        <img src="img/rec/cucumber.png">
+                    </div>
+                    <div class="rec_item_info">
+                        <h4>Продукт</h4>
+                        <p>Описание продукта</p>
+                        <div class="rec_item_buy">
+                            <p>99.50</p>
+                            <button>Добавить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="rec_item">
+                    <div class="rec_item_img">
+                        <img src="img/rec/cucumber.png">
+                    </div>
+                    <div class="rec_item_info">
+                        <h4>Продукт</h4>
+                        <p>Описание продукта</p>
+                        <div class="rec_item_buy">
+                            <p>99.50</p>
+                            <button>Добавить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rec_row">
+                <div class="rec_item">
+                    <div class="rec_item_img">
+                        <img src="img/rec/cucumber.png">
+                    </div>
+                    <div class="rec_item_info">
+                        <h4>Продукт</h4>
+                        <p>Описание продукта</p>
+                        <div class="rec_item_buy">
+                            <p>99.50</p>
+                            <button>Добавить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="rec_item">
+                    <div class="rec_item_img">
+                        <img src="img/rec/cucumber.png">
+                    </div>
+                    <div class="rec_item_info">
+                        <h4>Продукт</h4>
+                        <p>Описание продукта</p>
+                        <div class="rec_item_buy">
+                            <p>99.50</p>
+                            <button>Добавить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="often container">
+        <h2>Часто покупают</h2>
+        <div class="often_products">
+            <div class="often_item">
+                <div class="often_item_img">
+                    <img src="img/rec/cucumber.png">
+                </div>
+                <div class="often_item_info">
+                    <div class="often_item_info_text">
+                        <h4>Продукт</h4>
+                        <p>Описание продукта</p>
+                    </div>
+                    <div class="often_item_info_button">
+                        <a>
+                            <div class="light"><p>9999.99</p></div>
+                            <div class="dark"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g data-name="add" id="add-2"> <g> <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12" x2="12" y1="19" y2="5"></line> <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="5" x2="19" y1="12" y2="12"></line> </g> </g> </g> </g></svg></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="often_item">
+                <div class="often_item_img">
+                    <img src="img/rec/cucumber.png">
+                </div>
+                <div class="often_item_info">
+                    <div class="often_item_info_text">
+                        <h4>Продукт</h4>
+                        <p>Описание продукта</p>
+                    </div>
+                    <div class="often_item_info_button">
+                        <a>
+                            <div class="light"><p>99.50</p></div>
+                            <div class="dark"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g data-name="add" id="add-2"> <g> <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12" x2="12" y1="19" y2="5"></line> <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="5" x2="19" y1="12" y2="12"></line> </g> </g> </g> </g></svg></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="often_item">
+                <div class="often_item_img">
+                    <img src="img/rec/cucumber.png">
+                </div>
+                <div class="often_item_info">
+                    <div class="often_item_info_text">
+                        <h4>Продукт</h4>
+                        <p>Описание продукта</p>
+                    </div>
+                    <div class="often_item_info_button">
+                        <a>
+                            <div class="light"><p>99.50</p></div>
+                            <div class="dark"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g data-name="add" id="add-2"> <g> <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12" x2="12" y1="19" y2="5"></line> <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="5" x2="19" y1="12" y2="12"></line> </g> </g> </g> </g></svg></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container container">
+            <div class="contact-img">
+                <img src="img/contact.png" alt="" />
+            </div>
+            <div class="form-container">
+                <h2>Связь с нами</h2>
+                <input type="text" placeholder="Ваше имя" />
+                <input type="email" placeholder="E-Mail" />
+                <textarea cols="30" rows="6" maxlength="2000" placeholder="Ваше сообщение"></textarea>
+                <a href="#" class="btn btn-primary">Отправить</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer">
+            <div class="footer_info">
+                <div class="footer_company">
+                    <h3>Компания</h3>
+                    <div class="footer_list">
+                        <ul>
+                            <li><a href="#">О копмании</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_help">
+                    <h3>Поддержка</h3>
+                    <div class="footer_list">
+                        <ul>
+                            <li><a href="#">Оплата</a></li>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Качество продукта</a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_more">
+                    <div class="footer_more_number">
+                        <h3>8 123 123 12 31</h3>
+                        <p>Ежедневно с 8:00 до 23:00 по Ярославлю</p>
+                    </div>
+                    <div class="footer_more_card">
+                        <h3>Способ оплаты</h3>
+                        <div class="footer_more_cards">
+                            <img src="img/mastercard.png">
+                            <img src="img/visa.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Pinnochio 2023. Все права защищены</p>
+            <a href="#">Политика конфиденциальности</a>
+        </div>
+    </footer>
+
+    <script>
+        let burger = 0
+        function openBurger() {
+            if (burger === 0) {
+                document.getElementById("burger_nav").setAttribute("style", "display: flex;")
+                document.getElementById("bur1").setAttribute("style", "rotate: 45deg;")
+                document.getElementById("bur2").setAttribute("style", "display: none;")
+                document.getElementById("bur3").setAttribute("style", "rotate: -45deg; position: relative; bottom: 12px;")
+                
+                burger = 1
+            }
+            else if (burger === 1) {
+                document.getElementById("burger_nav").setAttribute("style", "display: none;")
+                document.getElementById("bur1").setAttribute("style", "rotate: 0;")
+                document.getElementById("bur2").setAttribute("style", "display: block;")
+                document.getElementById("bur3").setAttribute("style", "rotate: 0; position: relative; bottom: 0;")
+                burger = 0
+            }
+        }
+    </script>
+    <script>
+        let inner = 0
+        const interval = setInterval(function() {
+            inner++
+            if (inner === 10) {
+                document.getElementById("inner1").setAttribute("style", "background: url('https://img4.goodfon.ru/original/2048x1365/4/a2/salo-bekon-kartofel-fri-piure-salat.jpg') no-repeat;")
+                document.getElementById("change_info_block1_p").setAttribute("style", "display: none;")
+                document.getElementById("change_info_block1_h2").setAttribute("style", "display: none;")
+                document.getElementById("change_info_block2_p").setAttribute("style", "display: block; font-size: 50px;")
+            }
+            if (inner === 20) {
+                document.getElementById("inner1").setAttribute("style", "background: url('https://mobimg.b-cdn.net/v3/fetch/e6/e6c11117d6cf89a5c592ff121161fa5e.jpeg') no-repeat;")
+                document.getElementById("change_info_block1_p").setAttribute("style", "display: block;")
+                document.getElementById("change_info_block1_h2").setAttribute("style", "display: block;")
+                document.getElementById("change_info_block2_p").setAttribute("style", "display: none;")
+                inner = 0
+            }
+        }, 1000)
+    </script>
+    <script src="js/openBloks.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on("click", function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800,
+            function () {
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            }
+          );
+        } // End if
+      });
+    });
+  </script>
+</body>
 </html>

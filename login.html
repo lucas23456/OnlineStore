@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Yandex.Metrika counter -->
+     <!-- <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]function(){(m[i].a=m[i].a[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+        ym(93810082, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script> -->
+    <!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/login.css">
+    <title>Вход в аккаунт | Pinnochio</title>
+</head>
+<body>
+    <noscript><div><img src="https://mc.yandex.ru/watch/93810082" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <div class="wrapper">
+        <h1>Вход на сайт</h1>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png"></a>
+        </div>
+        <div class="login_box">
+            <!-- <div class="location_block" id="location_block">
+                <div class="your_city_p">
+                    <p>Ваш город: <span id="city"></span></p>
+                </div>
+                <div class="your_city">
+                    <a class="yes" onclick='document.getElementById("location_block").setAttribute("style", "display: none;")'>Да, верно</a>
+                    <a class="no">Выбрать другой</a>
+                </div>
+            </div> -->
+            <div class="change_type_box">
+                <a class="a_log" onclick="auth()" id="a_log">Авторизация</a>
+                <a class="a_reg" onclick="reg()" id="a_reg">Регистрация</a>
+            </div>
+            <div class="type_login" id="login">
+                <div class="type_login_info">
+                    <h2>Авторизация</h2>
+                    <p>После авторизации вы сможете осуществлять заказы и следить за их состоянием.</p>
+                </div>
+                <div class="type_login_input">
+                    <p>Введите номер телефона <span>*</span></p>
+                    <input type="tel" value="+7 ">
+                </div>
+            </div>
+            <div class="type_reg" id="register">
+                <div class="type_login_info">
+                    <h2>Регистрация</h2>
+                    <p>Зарегистрируйтесь и осуществляйте заказы.</p>
+                </div>
+                <div class="type_login_input">
+                    <p>Введите ваше имя <span>*</span></p>
+                    <input type="text">
+                    <p>Введите номер телефона <span>*</span></p>
+                    <input type="tel" value="+7 ">
+                </div>
+            </div>
+            <div class="continue">
+                <a href="" onclick="contLogin()">Продолжить</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function auth() {
+            document.getElementById("login").setAttribute("style", "display: flex;")
+            document.getElementById("register").setAttribute("style", "display: none;")
+
+            document.getElementById("a_log").setAttribute("style", "color: #000; border-bottom: 3px solid #098bb4; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;")
+            document.getElementById("a_reg").setAttribute("style", "color: #858585; border-bottom: none;")
+        }
+        function reg() {
+            document.getElementById("login").setAttribute("style", "display: none;")
+            document.getElementById("register").setAttribute("style", "display: flex;")
+
+            document.getElementById("a_log").setAttribute("style", "color: #858585; border-bottom: none;")
+            document.getElementById("a_reg").setAttribute("style", "color: #000; border-bottom: 3px solid #098bb4; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;")
+        }
+    </script>
+
+    <!-- <script>
+        const locationBlock = document.getElementById('location_block');
+        const cityElement = document.getElementById('city'); 
+        function getLocation() {
+            if (navigator.geolocation) { 
+                navigator.geolocation.getCurrentPosition(showPosition); 
+            } else { cityElement.innerHTML = "Geolocation не поддерживается вашим браузером."; 
+            } 
+        } 
+        function showPosition(position) { 
+            const lat = position.coords.latitude; 
+            const lon = position.coords.longitude;
+            fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=ru`) 
+            .then(response => response.json())
+            .then(data => {
+                const city = data.localityInfo.administrative[2].name;
+                cityElement.innerHTML = city;
+            })
+            .catch(error => {
+                console.log(error);
+                cityElement.innerHTML = "Не удалось получить данные о местоположении.";
+            });
+        } 
+        getLocation();
+        console.log(cityElement.innerHTML)
+    </script> -->
+</body>
+</html>
