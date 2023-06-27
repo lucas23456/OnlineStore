@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -11,7 +11,7 @@ body {
 }
 
 p {
-    font-size: 15px;
+    font-size: 12px;
 }
 
 ::-webkit-scrollbar {
@@ -198,12 +198,8 @@ header {
     text-decoration: none;
     text-transform: uppercase;
     padding: 15px 35px;
-    font-size: 20px;
+    font-size: 16px;
     transition: 0.2s;
-}
-
-.inner a:hover {
-    background-color: #098d8d;
 }
 
 .burger_nav {
@@ -247,7 +243,7 @@ header {
   }
   
   #about h2 {
-    font-size: 25px;
+    font-size: 20px;
   }
   
   #about p {
@@ -304,7 +300,7 @@ header {
 
 .rec h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     color: #09acdd;
 }
 
@@ -312,7 +308,6 @@ header {
     display: flex;
     width: 100%;
     position: relative;
-    right: 40px;
 }
 
 .rec_row {
@@ -322,7 +317,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 0 20px;
 }
 
 .rec_item {
@@ -353,7 +347,7 @@ header {
 }
 
 .rec_item p {
-    font-size: 15px;
+    font-size: 12px;
     font-style: normal;
 }
 
@@ -394,7 +388,7 @@ header {
 }
 
 .often h2 {
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .often_products {
@@ -456,7 +450,7 @@ header {
 
 .often_item_info_button .light p {
     color: #fff;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .often_item_info_button .dark {
@@ -536,7 +530,7 @@ header {
   }
   
   .form-container h2 {
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 500;
     color: #444;
     margin-bottom: 1rem;
@@ -544,7 +538,7 @@ header {
   }
   
   .form-container a {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   
 /* Footer */
@@ -581,7 +575,7 @@ footer {
 .footer_list a {
     text-decoration: none;
     color: #555;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .footer_list a:hover {
@@ -717,7 +711,7 @@ footer {
 .inner_info_bloks_p h2 {
     position: relative;
     bottom: 45vh;
-    font-size: 60px;
+    font-size: 40px;
     color: #fff;
 }
 
@@ -770,7 +764,7 @@ footer {
     }
     .often h2 {
         padding-bottom: 40px;
-        font-size: 35px;
+        font-size: 26px;
     }
     .often_item {
         display: flex;
@@ -799,10 +793,10 @@ footer {
     }
     .inner_info_bloks_p h2 {
         bottom: 70vh;
-        font-size: 50px;
+        font-size: 40px;
     }
     .rec h2 {
-        font-size: 30px;
+        font-size: 23px;
     }
 }
 

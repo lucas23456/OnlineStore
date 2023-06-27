@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-height: 100px;
+}
+
+.header_logo {
+    width: 50%;
+}
+
+.header_logo img {
+    max-width: 50%;
+}
+
+.header_logout {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+    padding: 30px 0;
+    border-radius: 10px;
+    background-color: #eeeeee;
+}
